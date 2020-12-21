@@ -10,6 +10,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
+    "axios": "^0.21.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
@@ -20,6 +21,7 @@
   },
   "scripts": {
     "start": "react-scripts start",
+    "tokens": "node src/Themes/TokensGenerator/index.js",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
@@ -45,6 +47,7 @@
     "@storybook/node-logger": "^6.1.11",
     "@storybook/preset-create-react-app": "^3.1.5",
     "@storybook/react": "^6.1.11",
+    "@types/axios": "^0.14.0",
     "@types/styled-components": "^5.1.6",
     "@types/styled-system": "^5.1.10",
     "@typescript-eslint/eslint-plugin": "^4.10.0",
@@ -58,6 +61,10 @@
     "eslint-plugin-prettier": "^3.3.0",
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
-    "prettier": "^2.2.1"
+    "json-diff": "^0.5.4",
+    "prettier": "^2.2.1",
+    "rgb-hex": "^3.0.0",
+    "ts-node": "^9.1.1",
+    "ts-node-dev": "^1.1.1"
   }
 }
