@@ -10,6 +10,7 @@
     "@types/node": "^12.0.0",
     "@types/react": "^16.9.53",
     "@types/react-dom": "^16.9.8",
+    "@wisereducacao/figma-token-parser": "^1.2.0",
     "axios": "^0.21.0",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
@@ -26,7 +27,8 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
-    "build-storybook": "build-storybook -s public"
+    "build-storybook": "build-storybook -s public",
+    "parse-tokens": "./node_modules/@wisereducacao/figma-token-parser/cli.js"
   },
   "browserslist": {
     "production": [

@@ -3479,6 +3479,15 @@
     "@webassemblyjs/wast-parser" "1.9.0"
     "@xtuc/long" "4.2.2"
 
+"@wisereducacao/figma-token-parser@^1.2.0":
+  version "1.2.0"
+  resolved "https://registry.yarnpkg.com/@wisereducacao/figma-token-parser/-/figma-token-parser-1.2.0.tgz#3d54091b2a40a1ea5fce9d9f3fbe9cd11c5a985f"
+  integrity sha512-IGPhu1QJEVEEono8seuoeeZN+4tFPXPKxUS24EWqvi/13vgOr3qoSjR06WTjITOJD5+B+S3WvaQ54uiZ8tUNzA==
+  dependencies:
+    axios "^0.21.1"
+    json-diff "^0.5.4"
+    rgb-hex "^3.0.0"
+
 "@xtuc/ieee754@^1.2.0":
   version "1.2.0"
   resolved "https://registry.yarnpkg.com/@xtuc/ieee754/-/ieee754-1.2.0.tgz#eef014a3145ae477a1cbc00cd1e552336dceb790"
@@ -4011,6 +4020,13 @@ axios@*, axios@^0.21.0:
   version "0.21.0"
   resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.0.tgz#26df088803a2350dff2c27f96fef99fe49442aca"
   integrity sha512-fmkJBknJKoZwem3/IKSSLpkdNXZeBu5Q7GA/aRsr2btgrptmSCxi2oFjZHqGdK9DoTil9PIHlPIZw2EcRJXRvw==
+  dependencies:
+    follow-redirects "^1.10.0"
+
+axios@^0.21.1:
+  version "0.21.1"
+  resolved "https://registry.yarnpkg.com/axios/-/axios-0.21.1.tgz#22563481962f4d6bde9a76d516ef0e5d3c09b2b8"
+  integrity sha512-dKQiRHxGD9PPRIUNIWvZhPTPpl1rf/OxTYKsqKUDjBwYylTvV7SjSHJb9ratfyzM6wCdLCOYLzs73qpg5c4iGA==
   dependencies:
     follow-redirects "^1.10.0"
 
