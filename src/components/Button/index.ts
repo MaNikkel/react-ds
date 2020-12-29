@@ -1,25 +1,29 @@
-import styled from 'styled-components';
-import { variant } from 'styled-system';
+import styled, { css } from 'styled-components';
 
 interface IButton {
-  variant: 'primary' | 'outline';
+  variant?: 'primary' | 'outline' | undefined;
 }
 
 const Button = styled.button<IButton>`
-  ${variant({
-    variants: {
-      primary: {
-        color: 'black',
-        bg: 'blue',
-      },
-      outline: {
-        color: 'black',
-        bg: 'transparent',
-        border: '1px solid',
-        borderColor: 'blue',
-      },
-    },
-  })}
+  ${({ theme, ...props }) => {
+    switch (props.variant) {
+      case 'primary':
+        return css`
+          color: ${theme['color-black']};
+          background: ${theme['color-blue']};
+        `;
+      case 'outline':
+        return css`
+          color: ${theme['color-black']};
+          background: ${theme['color-red']};
+        `;
+      default:
+        return css`
+          color: ${theme['color-black']};
+          background: ${theme['color-green']};
+        `;
+    }
+  }}
 `;
 
 export default Button;

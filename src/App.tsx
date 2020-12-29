@@ -1,14 +1,14 @@
 import React from 'react';
-import { ThemeProvider } from 'styled-components';
 import Button from './components/Button';
-import theme from './Themes';
+import TokenThemeProvider from './Themes/ThemeTokenProvider';
 
 function App(): JSX.Element {
   return (
-    <ThemeProvider theme={theme}>
-      <Button variant="outline">Botão</Button>
-    </ThemeProvider>
+    <TokenThemeProvider>
+      <Button variant="primary">Botão</Button>
+    </TokenThemeProvider>
   );
 }
 
+export { TokenThemeProvider };
 export default App;
