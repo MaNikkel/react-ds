@@ -2,6 +2,9 @@
   "name": "react-ds",
   "version": "0.1.0",
   "private": true,
+  "main": "dist/index.cjs.js",
+  "module": "dist/index.esm.js",
+  "source": "src/index.ts",
   "dependencies": {
     "@testing-library/jest-dom": "^5.11.4",
     "@testing-library/react": "^11.1.0",
@@ -12,17 +15,23 @@
     "@types/react-dom": "^16.9.8",
     "@wisereducacao/figma-token-parser": "^1.2.0",
     "axios": "^0.21.0",
-    "react": "^17.0.1",
-    "react-dom": "^17.0.1",
     "react-scripts": "4.0.1",
     "styled-components": "^5.2.1",
     "typescript": "^4.0.3",
     "web-vitals": "^0.2.4"
   },
+  "peerDependencies": {
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1"
+  },
   "scripts": {
     "start": "react-scripts start",
     "tokens": "node src/Themes/TokensGenerator/index.js",
-    "build": "react-scripts build",
+    "build": "rollup -c",
+    "build-watch": "rollup -c -w",
+    "start-playground": "cd playground && npm run start",
+    "i-all": "npm i && cd playground && npm i",
+    "dev": "npm-run-all --parallel build-watch start-playground",
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "storybook": "start-storybook -p 6006 -s public",
@@ -42,6 +51,11 @@
     ]
   },
   "devDependencies": {
+    "@babel/cli": "^7.12.10",
+    "@babel/core": "^7.12.10",
+    "@babel/preset-env": "^7.12.11",
+    "@babel/preset-react": "^7.12.10",
+    "@rollup/plugin-babel": "^5.2.2",
     "@storybook/addon-actions": "^6.1.11",
     "@storybook/addon-essentials": "^6.1.11",
     "@storybook/addon-links": "^6.1.11",
@@ -62,8 +76,13 @@
     "eslint-plugin-react": "^7.21.5",
     "eslint-plugin-react-hooks": "^4.2.0",
     "json-diff": "^0.5.4",
+    "npm-run-all": "^4.1.5",
     "prettier": "^2.2.1",
     "rgb-hex": "^3.0.0",
+    "rollup": "^2.36.1",
+    "rollup-plugin-delete": "^2.0.0",
+    "rollup-plugin-peer-deps-external": "^2.2.4",
+    "rollup-plugin-typescript2": "^0.29.0",
     "ts-node": "^9.1.1",
     "ts-node-dev": "^1.1.1"
   }
